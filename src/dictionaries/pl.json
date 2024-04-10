@@ -1,0 +1,47 @@
+{
+  "page": {
+    "navigation": {
+      "about": "O mnie",
+      "projects": "Projekty",
+      "contact": "Kontakt",
+      "skills": "Umiejętności"
+    },
+    "hero": {
+      "about": "O mnie",
+      "skills": "Umiejętności"
+    },
+    "about": {
+      "title": "O mnie",
+      "content": "Cześć! Nazywam się Bartłomiej Ostojski i mam 20 lat. Specjalizuję się w programowaniu zarówno frontendu, jak i backendu. Kodowanie to moja pasja, która towarzyszy mi od dzieciństwa. Uwielbiam tworzyć ciekawe projekty, które nie tylko wyzwalać moją kreatywność, ale także przyczyniają się do rozwoju moich umiejętności programistycznych.",
+      "button": "Napisz do mnie!"
+    },
+    "skills": {
+      "title": "UMIEJĘTNOŚCI",
+      "content": "Moją zabawę z programowaniem zacząłem już w szkole podstawowej. Tworzenie responsywnych i przyjaznych interfejsów nie stanowi dla mnie wyzwania. W trakcie nauki poznałem wiele narzędzi takich jak: React, Next.js, czy też MongoDB, których użyłem w swoich projektach."
+    },
+    "projects": {
+      "title": "PROJEKTY",
+      "content": "Poniżej przedstawiam kilka moich projektów nad którymi pracowałem. Starałem się, aby każdy z nich był unikalny i ciekawy. Zachęcam do zapoznania się z nimi!",
+      "buttons": {
+        "github": "GitHub",
+        "demo": "Live demo"
+      },
+      "quizyme": {
+        "title": "QUIZYME",
+        "content": "Quizyme to aplikacja, która umożliwia tworzenie quizów oraz fiszek w celu nauki. Aplikacja została zbudowana z użyciem Next.js, tailwindcss oraz MongoDB. Korzysta również z zewnętrznego api pixabay, które dostarcza zdjęcia do quizów. Aplikacja posiada responsywny design oraz nowoczesny wygląd."
+      },
+      "trycrypto": {
+        "title": "TRYCRYPTO",
+        "content": "Trycrypto to projekt, dzięki któremu możesz wypróbować inwestycje w kryptowaluty bez ryzyka utraty pieniędzy. Aplikacja została zbudowana z użyciem Reacta, oraz styled components. API zostało stworzone z użyciem Express.js oraz PostgreSQL. Dane finansowe pobierane są z Binance API, dzięki czemu aplikacja posiada wysoką płynność."
+      },
+      "gptprompts": {
+        "title": "GPT PROMPTS",
+        "content": "Gpt prompts to blog, który umożliwia użytkownikom, udostępnianie swoich własnych promptów do modelu CHAT GPT. Aplikacja umożliwia podgląd przykładowego odpowiedzi modelu językowego, korzystając z API OpenAI. Projekt został zbudowany korzystając z Next.js, oraz tailwindcss."
+      }
+    },
+    "contact": {
+      "title": "KONTAKT",
+      "content": "Napisz do mnie pod adres:"
+    }
+  }
+}

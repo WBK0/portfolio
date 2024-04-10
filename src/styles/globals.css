@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: Onest;
+  src: url(../fonts/Onest.ttf);
+}
+@font-face{
+  font-family: ChakraPetch;
+  src: url(../fonts/ChakraPetch-Bold.ttf);
+}
+
+body{
+  font-family: Onest;
+}

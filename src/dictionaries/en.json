@@ -1,0 +1,47 @@
+{
+  "page": {
+    "navigation": {
+      "about": "About me",
+      "projects": "Projects",
+      "contact": "Contact",
+      "skills": "Skills"
+    },
+    "hero": {
+      "about": "About me",
+      "skills": "My skills"
+    },
+    "about": {
+      "title": "About Me",
+      "content": "Hi there! My name is Bartłomiej Ostojski and I'm 20 years old. I specialize in both frontend and backend programming. Coding is my passion, which has been with me since childhood. I love creating interesting projects that not only unleash my creativity but also contribute to the development of my programming skills.",
+      "button": "Contact me!"
+    },
+    "skills": {
+      "title": "Skills",
+      "content": "I started my programming journey back in elementary school. Creating responsive and user-friendly interfaces is not a challenge for me. During my learning process, I've encountered many tools such as React, Next.js, and MongoDB, which I've used in my projects."
+    },
+    "projects": {
+      "title": "Projects",
+      "content": "Below are a few projects I've worked on. I aimed to make each of them unique and interesting. Feel free to check them out!",
+      "buttons": {
+        "github": "GitHub",
+        "demo": "Live Demo"
+      },
+      "quizyme": {
+        "title": "Quizyme",
+        "content": "Quizyme is an application that allows users to create quizzes and flashcards for learning purposes. The application is built using Next.js, tailwindcss, and MongoDB. It also utilizes an external pixabay API, which provides images for quizzes. The app features a responsive design and a modern look."
+      },
+      "trycrypto": {
+        "title": "Trycrypto",
+        "content": "Trycrypto is a project that enables you to try out cryptocurrency investments without the risk of losing money. The application is built using React and styled components. The API is created using Express.js and PostgreSQL. Financial data is retrieved from the Binance API, giving the app high liquidity."
+      },
+      "gptprompts": {
+        "title": "GPT Prompts",
+        "content": "Gpt prompts is a blog that allows users to share their own prompts with the CHAT GPT model. The application provides a preview of the model's language response using the OpenAI API. The project is built using Next.js and tailwindcss."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Feel free to reach out to me at:"
+    }
+  }
+}
