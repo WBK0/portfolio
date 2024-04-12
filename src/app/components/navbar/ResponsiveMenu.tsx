@@ -1,11 +1,19 @@
 import { useContext } from "react";
 import { NavbarContext } from "@/providers/NavbarProvider";
+import { useRouter } from "next/navigation";
+import { Internationalization } from "@/types/internationalization.types";
 
-const ResponsiveMenu = ({ handleMenu } : { handleMenu: () => void }) => {
+const ResponsiveMenu = ({ handleMenu, text } : { handleMenu: () => void, text: Internationalization['navigation'] }) => {
   const { aboutMeRef, mySkillsRef, projectsRef, contactRef, actualPage } = useContext(NavbarContext);
 
   const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const router = useRouter();
+
+  const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {    
+    router.push(`/${e.target.value}`, { scroll: false })
   }
 
   return (
@@ -26,7 +34,7 @@ const ResponsiveMenu = ({ handleMenu } : { handleMenu: () => void }) => {
           <p
             className={`${actualPage === "aboutMe" ? 'border-b-3' : ''} border-red py-1 w-fit text-xl`}
           >
-            About me
+            {text.about}
           </p>
         </div>
         <div 
@@ -36,7 +44,7 @@ const ResponsiveMenu = ({ handleMenu } : { handleMenu: () => void }) => {
           <p
             className={`${actualPage === "skills" ? 'border-b-3' : ''} border-red py-1 w-fit text-xl`}
           >
-            Skills
+            {text.skills}
           </p>
         </div>
         <div 
@@ -46,7 +54,7 @@ const ResponsiveMenu = ({ handleMenu } : { handleMenu: () => void }) => {
           <p
             className={`${actualPage === "projects" ? 'border-b-3' : ''} border-red py-1 w-fit text-xl`}
           >
-            Projects
+            {text.projects}
           </p>
         </div>
         <div 
@@ -56,11 +64,21 @@ const ResponsiveMenu = ({ handleMenu } : { handleMenu: () => void }) => {
           <p
             className={`${actualPage === "contact" ? 'border-b-3' : ''} border-red py-1 w-fit text-xl`}
           >
-            Contact
+            {text.contact}
           </p>
         </div>
       </div>
       <div className="mt-auto px-4 mb-9 font-bold">
+        <div className="flex justify-center mb-4">
+          <select
+            onChange={handleChangeLanguage}
+            className="px-4 py-2 bg-zinc-100 rounded-full cursor-pointer font-medium text-normal"
+          >
+            <option value="pl">PL</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        
         <p
           className="text-center text-zinc-700 text-lg font-Chakra"
         >

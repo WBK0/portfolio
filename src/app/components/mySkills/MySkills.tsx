@@ -124,7 +124,7 @@ const MySkills = ({ text } : { text: Internationalization['skills'] }) => {
       <div className="max-w-2xl mx-auto pt-16 flex flex-wrap gap-6 justify-center" data-aos="fade-up">
         {
           skills.map((value) => (
-            <div className="group relative w-fit flex justify-center">
+            <div className="group relative w-fit flex justify-center" key={value.title}>
               <Image
                 src={value.image}
                 alt={value.title}

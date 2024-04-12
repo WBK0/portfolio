@@ -1,16 +1,23 @@
 "use client";
-
 import { useContext, useState } from "react";
 import { NavbarContext } from "@/providers/NavbarProvider";
 import ResponsiveMenu from "./ResponsiveMenu";
 import { Internationalization } from "@/types/internationalization.types";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = ({ text } : { text: Internationalization['navigation'] }) => {
   const [responsiveMenu, setResponsiveMenu] = useState(false);
   const { aboutMeRef, mySkillsRef, projectsRef, contactRef, actualPage } = useContext(NavbarContext);
 
+  const router = useRouter();
+  const pathname = usePathname();
+
   const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {    
+    router.push(`/${e.target.value}`, { scroll: false })
   }
 
   const handleResponsiveMenu = () => {
@@ -67,6 +74,16 @@ const Navbar = ({ text } : { text: Internationalization['navigation'] }) => {
         </div>
       </div>
       <div className="flex-1">
+        <div className="hidden md:flex justify-end">
+          <select
+            className="bg-zinc-100 rounded-full px-3 py-1 font-medium text-normal"
+            value={pathname.replace("/", "")}
+            onChange={handleChangeLanguage}
+          >
+            <option value="en">EN</option>
+            <option value="pl">PL</option>
+          </select>
+        </div>
         <div className="flex justify-end md:hidden z-20">
           <button
             type="button"
@@ -84,6 +101,7 @@ const Navbar = ({ text } : { text: Internationalization['navigation'] }) => {
       responsiveMenu && (
         <ResponsiveMenu 
           handleMenu={handleResponsiveMenu}
+          text={text}
         />
       )
     }

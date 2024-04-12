@@ -46,7 +46,7 @@ const AboutMe = ({ text } : { text: Internationalization['about'] }) => {
       </div>
       <div className="flex-1 flex justify-center items-center" data-aos="fade-up">
         <div className="relative w-72">
-          <video src="http://localhost:3000/static/quizyme1.mp4" autoPlay loop muted className="w-full border-transparent rounded-xl" style={{borderWidth: '13px 17px 14px 14px', borderRadius: '40px', objectFit: 'cover'}} />
+          <video src="https://codebybartlomiej.pl/static/quizyme1.mp4" autoPlay preload="none" loop muted className="w-full border-transparent rounded-xl" style={{borderWidth: '13px 17px 14px 14px', borderRadius: '40px', objectFit: 'cover'}} />
           <Image src={iphone} alt="iPhone" className="top-0 left-0 w-full absolute" />
         </div>
       </div>   
