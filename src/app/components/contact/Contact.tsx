@@ -42,7 +42,7 @@ const Contact = ({ text } : { text: Internationalization['contact'] }) => {
             {text.content}
           </h5>
           <a
-            className="text-center text-zinc-600 text-lg md:text-4xl hover:text-black w-full mx-auto font-bold underline"
+            className="text-center text-zinc-600 text-lg md:text-4xl hover:text-black w-full mx-auto font-bold underline break-words"
             href="mailto:bartlomiej.ostojski@icloud.com"
           >
             bartlomiej.ostojski@icloud.com
