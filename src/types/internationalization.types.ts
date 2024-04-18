@@ -36,6 +36,11 @@ export type Internationalization = {
     gptprompts: {
       title: string,
       content: string
+    },
+    copyContent: {
+      login: string,
+      password: string
+      toastText: string
     }
   },
   contact: {

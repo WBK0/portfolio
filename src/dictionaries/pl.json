@@ -37,6 +37,11 @@
       "gptprompts": {
         "title": "GPT PROMPTS",
         "content": "Gpt prompts to blog, który umożliwia użytkownikom, udostępnianie swoich własnych promptów do modelu CHAT GPT. Aplikacja umożliwia podgląd przykładowego odpowiedzi modelu językowego, korzystając z API OpenAI. Projekt został zbudowany korzystając z Next.js, oraz tailwindcss."
+      },
+      "copyContent": {
+        "login": "Email:",
+        "password": "Hasło:",
+        "toastText": "Skopiowano do schowka!"
       }
     },
     "contact": {

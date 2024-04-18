@@ -7,10 +7,18 @@ import github from "./img/github.svg";
 import { useContext, useEffect } from "react";
 import { NavbarContext } from "@/providers/NavbarProvider";
 import { Internationalization } from "@/types/internationalization.types";
+import { toast } from "react-toastify";
 
 const Projects = ({ text } : { text: Internationalization['projects'] }) => {
   const { projectsRef, setActualPage } = useContext(NavbarContext);
 
+  const copy = (data: string) => {
+    navigator.clipboard.writeText(data);
+    toast.success(text.copyContent.toastText, {
+      toastId: data
+    });
+  }
+    
   useEffect(() => {
     const observerTop = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -76,7 +84,15 @@ const Projects = ({ text } : { text: Internationalization['projects'] }) => {
             >
               {text.quizyme.content}
             </p>
-            <div className="flex flex-wrap gap-4 justify-center mt-8 w-full">
+            <div className="font-semibold text-normal text-center text-zinc-700 mt-4">
+              <p onClick={() => copy('nertatopsa@gufum.com')} className="cursor-pointer">
+                {text.copyContent.login} nertatopsa@gufum.com
+              </p>
+              <p onClick={() => copy('Haslo123')} className="cursor-pointer">
+                {text.copyContent.password} Haslo123
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center mt-4 w-full">
               <a
                 className="bg-red text-white w-48 py-3 rounded-full font-bold hover:bg-redHover flex items-center justify-center"
                 href="https://github.com/WBK0/quizyme"
@@ -107,7 +123,15 @@ const Projects = ({ text } : { text: Internationalization['projects'] }) => {
             >
               {text.trycrypto.content}
             </p>
-            <div className="flex flex-wrap gap-4 justify-center mt-8">
+            <div className="font-semibold text-normal text-center text-zinc-700 mt-4">
+              <p onClick={() => copy('emaiadsl@email.com')} className="cursor-pointer">
+                {text.copyContent.login} emaiadsl@email.com
+              </p>
+              <p onClick={() => copy('Haslo123')} className="cursor-pointer">
+                {text.copyContent.password} Haslo123
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center mt-4">
               <a
                 className="bg-red text-white w-48 py-3 rounded-full font-bold hover:bg-redHover flex items-center justify-center"
                 href="https://github.com/WBK0/trycrypto-frontend"
@@ -150,7 +174,15 @@ const Projects = ({ text } : { text: Internationalization['projects'] }) => {
             >
               {text.gptprompts.content}
             </p>
-            <div className="flex flex-wrap gap-4 justify-center mt-8">
+            <div className="font-semibold text-normal text-center text-zinc-700 mt-4">
+              <p onClick={() => copy('emaiadsl@email.com')} className="cursor-pointer">
+                {text.copyContent.login} galmunafya@gufum.com
+              </p>
+              <p onClick={() => copy('Haslo123')} className="cursor-pointer">
+                {text.copyContent.password} Haslo123
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center mt-4">
               <a
                 className="bg-red text-white w-48 py-3 rounded-full font-bold hover:bg-redHover flex items-center justify-center"
                 href="https://github.com/WBK0/gpt-prompts-app"

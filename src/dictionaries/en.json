@@ -37,6 +37,11 @@
       "gptprompts": {
         "title": "GPT Prompts",
         "content": "Gpt prompts is a blog that allows users to share their own prompts with the CHAT GPT model. The application provides a preview of the model's language response using the OpenAI API. The project is built using Next.js and tailwindcss."
+      },
+      "copyContent": {
+        "login": "Email:",
+        "password": "Password:",
+        "toastText": "Copied to clipboard!"
       }
     },
     "contact": {

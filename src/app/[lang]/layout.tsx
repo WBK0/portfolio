@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Locale, i18n } from "../../../i18n.config";
+import ToastProvider from "@/providers/ToastProvider";
 
 export const metadata: Metadata = {
   title: "Portfolio | Bartłomiej Ostojski",
@@ -24,7 +25,9 @@ export default function RootLayout({
         <link rel="stylesheet"href="https://unpkg.com/aos@next/dist/aos.css" />
       </head>
       <body>
-        {children}
+        <ToastProvider>
+          {children}
+        </ToastProvider>
       </body>
     </html>
   );
